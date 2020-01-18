@@ -5,6 +5,7 @@
   "public": true,
   "builds": [
     { "src": "**/*.py", "use": "@now/python" },
-    { "src": "/person/*", "use": "@now/static" }
+    { "src": "/person/*", "use": "@now/static" },
+    { "src": "/tree/*", "use": "@now/static" }
   ]
 } 
