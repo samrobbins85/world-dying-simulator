@@ -42,18 +42,15 @@ svg { position:fixed; top:0; bottom:0; left:0; right:0 }
       const cloud = new Image();
       cloud.src = "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg";
       cloud.onload = () => {
-        var position = 0.2 * width;
-        while (position < width) {
           console.log("Doing things");
           ctx.drawImage(
                   cloud, //Image object to copy pixel data from
-                  position, //x position, distance from left edge
+                  0.2*width, //x position, distance from left edge
                   0.35 * height, //y position, distance from top edge
                   0.3 * cloud.naturalWidth, //display width
                   0.3 * cloud.naturalHeight //display height
           );
-          position += 0.1 * width;
-        }
+
       };
 
 
