@@ -46,13 +46,13 @@ svg { position:fixed; top:0; bottom:0; left:0; right:0 }
       /* drawImage once the Image object has loaded a url */
       image.onload = () => {
         ctx.drawImage(
-                image, //Image object to copy pixel data from
+                image.scale(-1, 1), //Image object to copy pixel data from
                 0.5*width, //x position, distance from left edge
                 0.5*height, //y position, distance from top edge
                 image.naturalWidth, //display width
                 image.naturalHeight //display height
         );
-      }
+      };
 
       //After setting onload, begin loading a url
       image.src = '/person/hot.svg';
