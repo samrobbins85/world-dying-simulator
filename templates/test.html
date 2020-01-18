@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <style>
+      html, body { margin:0; padding:0; overflow:hidden }
+svg { position:fixed; top:0; bottom:0; left:0; right:0 }
+    </style>
+  </head>
+  <body>
+    <canvas class="myCanvas">
+      <p>Add suitable fallback here.</p>
+    </canvas>
+
+    <script>
+
+      const canvas = document.querySelector('.myCanvas');
+      const width = canvas.width = window.innerWidth;
+      const height = canvas.height = window.innerHeight;
+      const ctx = canvas.getContext('2d');
+      ctx.translate(0, canvas.height);
+    ctx.scale(1, -1);
+
+      ctx.fillStyle = 'rgb(255,255,256)';
+      ctx.fillRect(0,0,width,height);
+      // ctx.globalCompositeOperation = 'destination-over';
+      
+      ctx.fillStyle = 'rgb(0, 0, 255)';
+      ctx.fillRect(0, 0, width, {{sea_level}});
+      // ctx.globalCompositeOperation = 'source-over';
+      
+      ctx.beginPath();
+      ctx.lineTo(width,400);
+
+      ctx.arc(0.4*width, 0, 400, 0.5*Math.PI, 1*Math.PI);
+      ctx.lineTo(width,0);
+      ctx.fillStyle = "#c2b280";
+      ctx.fill();
+
+    </script>
+
+  </body>
+</html> 
