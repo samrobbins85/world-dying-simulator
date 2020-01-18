@@ -40,6 +40,23 @@ svg { position:fixed; top:0; bottom:0; left:0; right:0 }
       ctx.fillStyle = "#c2b280";
       ctx.fill();
 
+      const cloud = new Image();
+      cloud.src="https://world-dying-simulator.now.sh/tree/cloud.png";
+      var position = 0.2 * width;
+      var height2 = 0.35 * height;
+      while (position < width) {
+        ctx.drawImage(
+                cloud, //Image object to copy pixel data from
+                position, //x position, distance from left edge
+                height2, //y position, distance from top edge
+                0.3 * image.naturalWidth, //display width
+                0.3 * image.naturalHeight //display height
+        );
+        position += 0.1 * width;
+      }
+      ;
+
+
       /* Start image load and draw code */
       const image = new Image(); //Create an Image
       const tree = new Image();
