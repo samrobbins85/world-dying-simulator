@@ -7,5 +7,6 @@ app = Flask(__name__)
 def catch_all(path):
     username = request.args.get('username')
     print('Hello world!', file=sys.stderr)
+    app.logger.info('testing info log')
     return Response("<h1>Flask on Now</h1><p>You visited: /%s</p>" % (path), mimetype="text/html")
  
