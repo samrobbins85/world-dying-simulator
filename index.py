@@ -5,9 +5,8 @@ app = Flask(__name__)
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
-    try:
-        sea_level = request.args.get('sea_level')
-    except:
+    sea_level = request.args.get('sea_level')
+    if sea_level == None:
         sea_level = 300
 
 #     print(username, file=sys.stderr)
