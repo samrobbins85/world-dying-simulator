@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "alias": "world-dying.now.sh",
+  "name": "world-dying",
+  "public": true,
+  "builds": [
+    { "src": "**/*.py", "use": "@now/python" }
+  ]
+} 
