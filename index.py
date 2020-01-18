@@ -9,11 +9,12 @@ def catch_all(path):
     temperature = request.args.get('temperature')
     if sea_level == None:
         sea_level = 300
+    print(temperature)
     if temperature=="hot":
-        temperature=="https://world-dying.now.sh/person/hot.png"
+        temperature="https://world-dying.now.sh/person/hot.png"
+        print(temperature)
     else:
-        temperature=="https://world-dying.now.sh/person/cold.png"
+        temperature="https://world-dying.now.sh/person/cold.png"
 
-#     print(username, file=sys.stderr)
     return render_template('test.html', sea_level=sea_level, temperature=temperature)
  
