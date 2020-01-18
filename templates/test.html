@@ -9,7 +9,7 @@ svg { position:fixed; top:0; bottom:0; left:0; right:0 }
     </style>
   </head>
   <body>
-  <img id="scream" width="220" height="277" src="/person/hot.svg" alt="The Scream">
+<!--  <img id="scream" width="220" height="277" src="/person/hot.svg" alt="The Scream">-->
 
   <canvas class="myCanvas">
       <p>Add suitable fallback here.</p>
@@ -47,8 +47,8 @@ svg { position:fixed; top:0; bottom:0; left:0; right:0 }
     window.onload = function() {
       var c = document.getElementById("myCanvas");
       var ctx = c.getContext("2d");
-      var img = document.getElementById("scream");
-      ctx.drawImage(img, 10, 10, 0.5*width, 0.5*height);
+      // var img = document.getElementById("scream");
+      // ctx.drawImage(img, 10, 10, 0.5*width, 0.5*height);
     }
   </script>
 
