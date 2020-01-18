@@ -42,20 +42,52 @@ svg { position:fixed; top:0; bottom:0; left:0; right:0 }
 
       /* Start image load and draw code */
       const image = new Image(); //Create an Image
+      const tree = new Image();
+      tree.src="https://world-dying-simulator.now.sh/tree/tree.png";
+
 
       /* drawImage once the Image object has loaded a url */
       image.onload = () => {
         ctx.drawImage(
                 image, //Image object to copy pixel data from
-                0.3*width, //x position, distance from left edge
-                0.35*height, //y position, distance from top edge
-                0.5*image.naturalWidth, //display width
-                0.5*image.naturalHeight //display height
+                0.3 * width, //x position, distance from left edge
+                0.35 * height, //y position, distance from top edge
+                0.5 * image.naturalWidth, //display width
+                0.5 * image.naturalHeight //display height
         );
+        var position = 0.5 * width;
+        var height2=0.35*height;
+        while (position < width) {
+          ctx.drawImage(
+                  tree, //Image object to copy pixel data from
+                  position, //x position, distance from left edge
+                  height2, //y position, distance from top edge
+                  0.3 * image.naturalWidth, //display width
+                  0.3 * image.naturalHeight //display height
+          );
+          position+=0.1*width;
+          height2+=0.05*height;
+        };
+        var position = 0.55*width;
+        var height2=0.25*height;
+        while (position < width) {
+          ctx.drawImage(
+                  tree, //Image object to copy pixel data from
+                  position, //x position, distance from left edge
+                  height2, //y position, distance from top edge
+                  0.3 * image.naturalWidth, //display width
+                  0.3 * image.naturalHeight //display height
+          );
+          position+=0.1*width;
+          height2+=0.05*height;
+        };
       };
+
+
 
       //After setting onload, begin loading a url
       image.src = "{{temperature}}";
+      tree.src="https://world-dying-simulator.now.sh/tree/tree.png";
 
 
     </script>
