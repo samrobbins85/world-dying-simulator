@@ -40,18 +40,62 @@ svg { position:fixed; top:0; bottom:0; left:0; right:0 }
       ctx.fillStyle = "#c2b280";
       ctx.fill();
       const cloud = new Image();
-      cloud.src = "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg";
+      cloud.src = "https://world-dying-simulator.now.sh/tree/azure.png";
       cloud.onload = () => {
           console.log("Doing things");
           ctx.drawImage(
                   cloud, //Image object to copy pixel data from
                   0.2*width, //x position, distance from left edge
-                  0.35 * height, //y position, distance from top edge
-                  0.3 * cloud.naturalWidth, //display width
-                  0.3 * cloud.naturalHeight //display height
+                  0.8 * height, //y position, distance from top edge
+                  0.05 * cloud.naturalWidth, //display width
+                  0.05 * cloud.naturalHeight //display height
           );
 
       };
+
+      const google = new Image();
+      google.src = "https://world-dying-simulator.now.sh/tree/google.png";
+      google.onload = () => {
+        console.log("Doing things");
+        ctx.drawImage(
+                google, //Image object to copy pixel data from
+                0.5*width, //x position, distance from left edge
+                0.8 * height, //y position, distance from top edge
+                0.2 * google.naturalWidth, //display width
+                0.2 * google.naturalHeight //display height
+        );
+
+      };
+
+      const aws = new Image();
+      aws.src = "https://world-dying-simulator.now.sh/tree/aws.png";
+      aws.onload = () => {
+        console.log("Doing things");
+        ctx.drawImage(
+                aws, //Image object to copy pixel data from
+                0.8*width, //x position, distance from left edge
+                0.8 * height, //y position, distance from top edge
+                0.2 * aws.naturalWidth, //display width
+                0.2 * aws.naturalHeight //display height
+        );
+
+      };
+
+      const sun = new Image();
+      sun.src = "https://world-dying-simulator.now.sh/tree/sun.png";
+      sun.onload = () => {
+        console.log("Doing things");
+        ctx.drawImage(
+                sun, //Image object to copy pixel data from
+                0.01*width, //x position, distance from left edge
+                0.8 * height, //y position, distance from top edge
+                0.2 * sun.naturalWidth, //display width
+                0.2 * sun.naturalHeight //display height
+        );
+
+      };
+
+
 
 
 
